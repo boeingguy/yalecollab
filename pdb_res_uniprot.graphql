@@ -1,0 +1,13 @@
+query structure ($entry_ids: [String!]!) {
+    entries(entry_ids: $entry_ids) {
+        rcsb_id
+        rcsb_entry_info {
+            resolution_combined
+        }
+        polymer_entities{
+            rcsb_polymer_entity_container_identifiers {
+                uniprot_ids
+            }
+        }
+    }
+}
